@@ -1,4 +1,5 @@
 import React from 'react'
+// import fungsi ini kita gunakan untuk proses import data dari file excel ke database kita,
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import Container from '@/Components/Container';
 import { Head, useForm, usePage } from '@inertiajs/react';
@@ -11,6 +12,7 @@ export default function Create({auth}) {
 
     // destruct roles from usepage props
     const { roles } = usePage().props;
+    // untuk mendefinisikan konstanta dalam sebuah kelas. Konstanta adalah nilai yang tidak dapat diubah setelah didefinisikan. Berikut adalah beberapa contoh penggunaan const dalam Laravel:
 
     // define state with helper inertia
     const { data, setData, post, errors } = useForm({
@@ -54,7 +56,7 @@ export default function Create({auth}) {
     return (
         <AuthenticatedLayout
             user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Create User</h2>}
+            header={<h2 className="font-semibold text-xl text-blue-800 leading-tight">Create User</h2>}
         >
             <Head title={'Create Users'}/>
             <Container>
